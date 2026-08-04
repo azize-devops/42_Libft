@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azdursun <azdursun@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/04 05:53:13 by azdursun          #+#    #+#             */
-/*   Updated: 2026/08/04 11:32:02 by azdursun         ###   ########.fr       */
+/*   Created: 2026/08/04 03:33:08 by azdursun          #+#    #+#             */
+/*   Updated: 2026/08/04 11:36:34 by azdursun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+int	ft_tolower(int c)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && 122))
+	if (ft_toupper(c))
 	{
-		return (1);
+		return (c + 32);
 	}
-	return (0);
+	return (c);
 }
