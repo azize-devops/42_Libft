@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azdursun <azdursun@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/07 09:07:33 by azdursun          #+#    #+#             */
-/*   Updated: 2026/08/07 16:20:49 by azdursun         ###   ########.fr       */
+/*   Created: 2026/08/07 14:57:30 by azdursun          #+#    #+#             */
+/*   Updated: 2026/08/07 16:43:37 by azdursun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dsize)
+char	*strnstr ( const char *big, const char *little, size_t len)
 {
-	size_t	counter;
-
+	int	counter;
+	
 	counter = 0;
-	if (dsize > 0)
+	
+	if (little == '\0')
 	{
-		while ((dsize -1) > counter && src[counter])
-		{
-			dst[counter] = src[counter];
-			counter++;
-		}
-		dst[counter] = '\0';
+		return (big);
 	}
-	while (src[counter])
+	while (big[counter])
 	{
-		counter++;
+		if ()
 	}
-	return (counter);
 }
