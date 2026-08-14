@@ -6,11 +6,9 @@
 /*   By: azdursun <azdursun@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/07 09:07:33 by azdursun          #+#    #+#             */
-/*   Updated: 2026/08/07 16:20:49 by azdursun         ###   ########.fr       */
+/*   Updated: 2026/08/14 13:32:07 by azdursun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include "libft.h"
 

@@ -6,7 +6,7 @@
 /*   By: azdursun <azdursun@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 05:54:10 by azdursun          #+#    #+#             */
-/*   Updated: 2026/08/04 11:34:58 by azdursun         ###   ########.fr       */
+/*   Updated: 2026/08/14 18:44:38 by azdursun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 127)
-	{
+	if (c >= 32 && c < 127)
 		return (1);
-	}
 	return (0);
 }

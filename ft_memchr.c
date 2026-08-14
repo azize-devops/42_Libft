@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azdursun <azdursun@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/04 11:29:05 by azdursun          #+#    #+#             */
-/*   Updated: 2026/08/14 11:50:54 by azdursun         ###   ########.fr       */
+/*   Created: 2026/08/11 13:11:21 by azdursun          #+#    #+#             */
+/*   Updated: 2026/08/14 10:51:53 by azdursun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
+void	*ft_memchr(const void *ptr, int c, size_t byte)
 {
-	size_t	dst_size;
-	size_t	src_size;
+	unsigned char	*p;
 
-	dst_size = ft_strlen(dst);
-	src_size = ft_strlen(src);
-	if (dsize == 0)
+	p = (unsigned char *)ptr;
+	if (!p ||!byte)
+		return (NULL);
+	while (byte--)
 	{
-		return (src_size);
+		if (*p != (unsigned char)c)
+			p++;
+		return (p);
 	}
-	else if (dst_size < (dsize -1))
-	{
-		return (dst_size + ft_strlcpy(dst + dst_size, src, dsize - dst_size));
-	}
-	return (dst_size + src_size);
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: azdursun <azdursun@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 05:52:40 by azdursun          #+#    #+#             */
-/*   Updated: 2026/08/04 11:32:44 by azdursun         ###   ########.fr       */
+/*   Updated: 2026/08/14 18:41:23 by azdursun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 122)
-	{
+	if (c >= 0 && c <= 127)
 		return (1);
-	}
 	return (0);
 }

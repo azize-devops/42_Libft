@@ -6,7 +6,7 @@
 /*   By: azdursun <azdursun@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 05:52:04 by azdursun          #+#    #+#             */
-/*   Updated: 2026/08/04 11:34:25 by azdursun         ###   ########.fr       */
+/*   Updated: 2026/08/14 18:43:25 by azdursun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 int	ft_isdigit(int c)
 {
-	if (c >= 48 && c <= 57)
-	{
+	if (c >= '0' && c <= '9')
 		return (1);
-	}
 	return (0);
 }

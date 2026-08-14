@@ -1,31 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azdursun <azdursun@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/04 11:29:05 by azdursun          #+#    #+#             */
-/*   Updated: 2026/08/14 11:50:54 by azdursun         ###   ########.fr       */
+/*   Created: 2026/08/11 23:14:54 by azdursun          #+#    #+#             */
+/*   Updated: 2026/08/14 18:22:14 by azdursun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
+static int	ft_isspace(int c)
 {
-	size_t	dst_size;
-	size_t	src_size;
+	return ((c >= 9 && c <= 13) || (32 == c));
+}
 
-	dst_size = ft_strlen(dst);
-	src_size = ft_strlen(src);
-	if (dsize == 0)
+int	ft_atoi(const char *str)
+{
+	int	s_str;
+	int	r_str;
+
+	s_str = 1;
+	r_str = 0;
+	while (ft_isspace(*str))
+		str++;
+	if (*str == '+' || *str == '-')
 	{
-		return (src_size);
+		if (*str == '-')
+			s_str = -1;
+		str++;
 	}
-	else if (dst_size < (dsize -1))
+	while (ft_isdigit(*str))
 	{
-		return (dst_size + ft_strlcpy(dst + dst_size, src, dsize - dst_size));
+		r_str *= 10 + (*str - '0');
+		str++;
 	}
-	return (dst_size + src_size);
+	return (r_str * s_str);
 }

@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azdursun <azdursun@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/04 11:29:05 by azdursun          #+#    #+#             */
-/*   Updated: 2026/08/14 11:50:54 by azdursun         ###   ########.fr       */
+/*   Created: 2026/08/14 11:10:52 by azdursun          #+#    #+#             */
+/*   Updated: 2026/08/14 11:14:23 by azdursun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	dst_size;
-	size_t	src_size;
+	char	*sb;
 
-	dst_size = ft_strlen(dst);
-	src_size = ft_strlen(src);
-	if (dsize == 0)
-	{
-		return (src_size);
-	}
-	else if (dst_size < (dsize -1))
-	{
-		return (dst_size + ft_strlcpy(dst + dst_size, src, dsize - dst_size));
-	}
-	return (dst_size + src_size);
+	return (sb);
 }
