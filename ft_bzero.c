@@ -6,13 +6,13 @@
 /*   By: azdursun <azdursun@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/08 15:36:44 by azdursun          #+#    #+#             */
-/*   Updated: 2026/08/14 18:27:02 by azdursun         ###   ########.fr       */
+/*   Updated: 2026/08/21 17:45:00 by azdursun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *dst, size_t len)
+void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(dst, 0, len);
+	ft_memset(s, 0, n);
 }

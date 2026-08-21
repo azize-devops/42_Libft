@@ -6,7 +6,7 @@
 /*   By: azdursun <azdursun@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 05:54:22 by azdursun          #+#    #+#             */
-/*   Updated: 2026/08/14 13:32:37 by azdursun         ###   ########.fr       */
+/*   Updated: 2026/08/21 17:45:00 by azdursun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlen(const char *s)
 {
-	int	counter;
+	size_t	i;
 
-	counter = -1;
-	while (*(s + ++counter))
-		;
-	return (counter);
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }

@@ -6,7 +6,7 @@
 /*   By: azdursun <azdursun@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/11 23:14:54 by azdursun          #+#    #+#             */
-/*   Updated: 2026/08/14 18:22:14 by azdursun         ###   ########.fr       */
+/*   Updated: 2026/08/21 17:45:00 by azdursun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_atoi(const char *str)
 	}
 	while (ft_isdigit(*str))
 	{
-		r_str *= 10 + (*str - '0');
+		r_str = (r_str * 10) + (*str - '0');
 		str++;
 	}
 	return (r_str * s_str);

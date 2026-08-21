@@ -6,7 +6,7 @@
 /*   By: azdursun <azdursun@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/10 09:50:28 by azdursun          #+#    #+#             */
-/*   Updated: 2026/08/14 11:17:47 by azdursun         ###   ########.fr       */
+/*   Updated: 2026/08/21 17:45:00 by azdursun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	counter;
+	size_t	i;
 
-	counter = 0;
-	if (!s[0])
-		return (NULL);
-	while (s[counter])
+	i = 0;
+	while (s[i])
 	{
-		if (s[counter] == c)
-			return ((char *)s + counter);
-		counter++;
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
+		i++;
 	}
+	if ((char)c == '\0')
+		return ((char *)&s[i]);
 	return (NULL);
 }

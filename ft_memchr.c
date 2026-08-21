@@ -6,24 +6,23 @@
 /*   By: azdursun <azdursun@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/11 13:11:21 by azdursun          #+#    #+#             */
-/*   Updated: 2026/08/14 10:51:53 by azdursun         ###   ########.fr       */
+/*   Updated: 2026/08/21 17:45:00 by azdursun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *ptr, int c, size_t byte)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*p;
+	const unsigned char	*p;
 
-	p = (unsigned char *)ptr;
-	if (!p ||!byte)
-		return (NULL);
-	while (byte--)
+	p = (const unsigned char *)s;
+	while (n > 0)
 	{
-		if (*p != (unsigned char)c)
-			p++;
-		return (p);
+		if (*p == (unsigned char)c)
+			return ((void *)p);
+		p++;
+		n--;
 	}
-	return (0);
+	return (NULL);
 }

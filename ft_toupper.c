@@ -6,7 +6,7 @@
 /*   By: azdursun <azdursun@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 03:32:20 by azdursun          #+#    #+#             */
-/*   Updated: 2026/08/04 11:36:50 by azdursun         ###   ########.fr       */
+/*   Updated: 2026/08/21 17:45:00 by azdursun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 int	ft_toupper(int c)
 {
-	if (ft_tolower(c))
-	{
+	if (c >= 'a' && c <= 'z')
 		return (c - 32);
-	}
 	return (c);
 }
