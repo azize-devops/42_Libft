@@ -6,7 +6,7 @@
 /*   By: azdursun <azdursun@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/14 11:36:01 by azdursun          #+#    #+#             */
-/*   Updated: 2026/08/21 17:45:00 by azdursun         ###   ########.fr       */
+/*   Updated: 2026/08/21 18:30:00 by azdursun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
-	res = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
+	res = (char *)ft_calloc(len1 + len2 + 1, sizeof(char));
 	if (!res)
 		return (NULL);
 	i = 0;
@@ -36,6 +36,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	while (j < len2)
 		res[i++] = s2[j++];
-	res[i] = '\0';
 	return (res);
 }

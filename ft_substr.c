@@ -6,7 +6,7 @@
 /*   By: azdursun <azdursun@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/14 11:10:52 by azdursun          #+#    #+#             */
-/*   Updated: 2026/08/21 17:45:00 by azdursun         ###   ########.fr       */
+/*   Updated: 2026/08/21 18:30:00 by azdursun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (len > s_len - start)
 		len = s_len - start;
-	sub = (char *)malloc(sizeof(char) * (len + 1));
+	sub = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!sub)
 		return (NULL);
 	i = 0;
@@ -34,6 +34,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		sub[i] = s[start + i];
 		i++;
 	}
-	sub[i] = '\0';
 	return (sub);
 }

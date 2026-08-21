@@ -6,7 +6,7 @@
 /*   By: azdursun <azdursun@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/11 12:44:59 by azdursun          #+#    #+#             */
-/*   Updated: 2026/08/21 17:45:00 by azdursun         ###   ########.fr       */
+/*   Updated: 2026/08/21 18:30:00 by azdursun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s)
 	size_t	i;
 
 	len = ft_strlen(s);
-	dup = (char *)malloc(sizeof(char) * (len + 1));
+	dup = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!dup)
 		return (NULL);
 	i = 0;
@@ -28,6 +28,5 @@ char	*ft_strdup(const char *s)
 		dup[i] = s[i];
 		i++;
 	}
-	dup[i] = '\0';
 	return (dup);
 }

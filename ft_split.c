@@ -6,7 +6,7 @@
 /*   By: azdursun <azdursun@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/21 17:45:00 by azdursun          #+#    #+#             */
-/*   Updated: 2026/08/21 17:45:00 by azdursun         ###   ########.fr       */
+/*   Updated: 2026/08/21 18:30:00 by azdursun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	words = ft_count_words(s, c);
-	tab = (char **)malloc(sizeof(char *) * (words + 1));
+	tab = (char **)ft_calloc(words + 1, sizeof(char *));
 	if (!tab)
 		return (NULL);
 	return (ft_fill_split(tab, s, c, words));
